@@ -2,7 +2,7 @@ import React from "react";
 
 function Container({
   header,
-  children,
+  children = [],
   textPosition = "", // possible values: left, right, center
   direction = "horizontal", // possible values: vertical, horizontal
   contentPosition = "center", // possible values: left, right, center
@@ -13,6 +13,7 @@ function Container({
 
       <div className={`container-children ${direction} ${contentPosition}`}>
         {children}
+        <p>Note: there are [{children.length}] children</p>
       </div>
     </div>
   );
